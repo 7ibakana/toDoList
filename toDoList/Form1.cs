@@ -24,7 +24,7 @@ namespace toDoList
             if (!String.IsNullOrWhiteSpace(newItem))
             {
                 //use contains to check if item is already in Items collection
-                if (clsToDo.Items.Contains(newItem))
+                if (itemIsInList(clsToDo.Items, newItem))
                 {
                     MessageBox.Show("You already added that item", "Error");
                 }
@@ -54,6 +54,17 @@ namespace toDoList
                 clsToDo.Items.Remove(item); //Remove by value
                 lstDone.Items.Add(item);
             }
+        }
+        private bool itemIsInList(CheckedListBox.ObjectCollection items, string newItem)
+        {
+            foreach (string item in items)
+            {
+                if (item.ToUpper() == newItem.ToUpper())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
