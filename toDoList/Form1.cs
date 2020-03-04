@@ -55,7 +55,7 @@ namespace toDoList
                 lstDone.Items.Add(item);
             }
         }
-        private bool itemIsInList(CheckedListBox.ObjectCollection items, string newItem)
+        private bool itemIsInList(CheckedListBox.ObjectCollection items, string newItem) //ItemIsInList validation
         {
             foreach (string item in items)
             {
