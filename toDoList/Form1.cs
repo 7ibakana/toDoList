@@ -24,15 +24,26 @@ namespace toDoList
             if (!String.IsNullOrWhiteSpace(newItem))
             {
                 //use contains to check if item is already in Items collection
-                if (itemIsInList(clsToDo.Items, newItem))
+                if (clsToDo.Items.Contains(newItem))
                 {
                     MessageBox.Show("You already added that item", "Error");
                 }
                 else
                 {
                     //Use Add to new item to end of the Items collection
-                    clsToDo.Items.Add(newItem);
+                    DateTime todoCreated = DateTime.Now;
+                    bool urgent = chkUrgent.Checked;
+                    //Format the text, date/time created and urgent into one string
+                    string todoText = $"{newItem} - Created at {todoCreated:g}";
+                    if (urgent)
+                    {
+                        todoText += " URGENT!";
+                    }
+                    //add to the ListBox items
+                    clsToDo.Items.Add(todoText);
+                    //Clear inputs
                     txtNewToDo.Text = "";
+                    chkUrgent.Checked = false;
                 }
             }
             //no else, just ignore empty input

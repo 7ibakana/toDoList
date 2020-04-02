@@ -36,6 +36,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lstDone = new System.Windows.Forms.ListBox();
+            this.chkUrgent = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@
             // 
             // btnAddToDo
             // 
-            this.btnAddToDo.Location = new System.Drawing.Point(353, 40);
+            this.btnAddToDo.Location = new System.Drawing.Point(390, 38);
             this.btnAddToDo.Name = "btnAddToDo";
             this.btnAddToDo.Size = new System.Drawing.Size(75, 23);
             this.btnAddToDo.TabIndex = 2;
@@ -78,7 +79,7 @@
             this.clsToDo.FormattingEnabled = true;
             this.clsToDo.Location = new System.Drawing.Point(36, 126);
             this.clsToDo.Name = "clsToDo";
-            this.clsToDo.Size = new System.Drawing.Size(392, 139);
+            this.clsToDo.Size = new System.Drawing.Size(429, 139);
             this.clsToDo.TabIndex = 4;
             // 
             // btnDelete
@@ -105,15 +106,28 @@
             this.lstDone.FormattingEnabled = true;
             this.lstDone.Location = new System.Drawing.Point(36, 350);
             this.lstDone.Name = "lstDone";
-            this.lstDone.Size = new System.Drawing.Size(392, 69);
+            this.lstDone.Size = new System.Drawing.Size(429, 69);
             this.lstDone.TabIndex = 7;
+            // 
+            // chkUrgent
+            // 
+            this.chkUrgent.AutoSize = true;
+            this.chkUrgent.Checked = true;
+            this.chkUrgent.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkUrgent.Location = new System.Drawing.Point(326, 40);
+            this.chkUrgent.Name = "chkUrgent";
+            this.chkUrgent.Size = new System.Drawing.Size(58, 17);
+            this.chkUrgent.TabIndex = 8;
+            this.chkUrgent.Text = "Urgent";
+            this.chkUrgent.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AcceptButton = this.btnAddToDo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 439);
+            this.ClientSize = new System.Drawing.Size(504, 439);
+            this.Controls.Add(this.chkUrgent);
             this.Controls.Add(this.lstDone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnDelete);
@@ -139,6 +153,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lstDone;
+        private System.Windows.Forms.CheckBox chkUrgent;
     }
 }
 
