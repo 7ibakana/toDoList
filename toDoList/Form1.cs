@@ -25,29 +25,31 @@ namespace toDoList
             if (!String.IsNullOrWhiteSpace(todoText))
             {
                 //Create new toDo object using a constructor
-                ToDo toDoItem = new ToDo(todoText, urbgent);
+                ToDo toDoItem = new ToDo(todoText, urgent);
                 if (!ToDoItemInList(toDoItem))
                 {
                     clsToDo.Items.Add(toDoItem);
-                txtNewToDo.Text = ""; //Clear text
+                    txtNewToDo.Text = ""; //Clear text
                 }
-
-            else
-            {
-                MessageBox.Show("You already added that", "Duplicate");
+                else
+                {
+                    MessageBox.Show("You already added that", "Duplicate");
+                }
             }
         }
-    }
-    private bool ToDoItemInList(ToDo toDoItem)
-    {
-        foreach (ToDo listItem in clsToDo.Items)
+        private bool ToDoItemInList(ToDo toDoItem)
         {
-            if (toDoItem.Text.ToUpper() == listItem.Text.ToUpper())
+            foreach (ToDo listItem in clsToDo.Items)
+            {
+                if (toDoItem.Text.ToUpper() == listItem.Text.ToUpper())
+                {
+                    return true; //This list item has the same text as toDoItem
+                }
+            }
+            //If the end of the loop is reached without returning,
+            //an item with the same text is not in the list. Return false
+            return false;
         }
-    }
-    //If the end of the loop is reached without returning,
-    //an item with the same text is not in the list. Return false
-    return false;
     private void btnDelete_Click(object sender, EventArgs e)
         {
             //Make new list
