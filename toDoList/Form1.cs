@@ -20,47 +20,46 @@ namespace toDoList
         private void btnAddToDo_Click(object sender, EventArgs e)
         {
             //Remove any spaces start and end of string
-            string newItem = txtNewToDo.Text.Trim();
-            if (!String.IsNullOrWhiteSpace(newItem))
+            string todoText = txtNewToDo.Text;
+            bool urgent = chkUrgent.Checked;
+            if (!String.IsNullOrWhiteSpace(todoText))
             {
-                //use contains to check if item is already in Items collection
-                if (clsToDo.Items.Contains(newItem))
+                //Create new toDo object using a constructor
+                ToDo toDoItem = new ToDo(todoText, urbgent);
+                if (!ToDoItemInList(toDoItem))
                 {
-                    MessageBox.Show("You already added that item", "Error");
+                    clsToDo.Items.Add(toDoItem);
+                txtNewToDo.Text = ""; //Clear text
                 }
-                else
-                {
-                    //Use Add to new item to end of the Items collection
-                    DateTime todoCreated = DateTime.Now;
-                    bool urgent = chkUrgent.Checked;
-                    //Format the text, date/time created and urgent into one string
-                    string todoText = $"{newItem} - Created at {todoCreated:g}";
-                    if (urgent)
-                    {
-                        todoText += " URGENT!";
-                    }
-                    //add to the ListBox items
-                    clsToDo.Items.Add(todoText);
-                    //Clear inputs
-                    txtNewToDo.Text = "";
-                    chkUrgent.Checked = false;
-                }
-            }
-            //no else, just ignore empty input
-        }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+            else
+            {
+                MessageBox.Show("You already added that", "Duplicate");
+            }
+        }
+    }
+    private bool ToDoItemInList(ToDo toDoItem)
+    {
+        foreach (ToDo listItem in clsToDo.Items)
+        {
+            if (toDoItem.Text.ToUpper() == listItem.Text.ToUpper())
+        }
+    }
+    //If the end of the loop is reached without returning,
+    //an item with the same text is not in the list. Return false
+    return false;
+    private void btnDelete_Click(object sender, EventArgs e)
         {
             //Make new list
-            List<string> doneItems = new List<string>();
+            List<ToDo> doneItems = new List<ToDo>();
             //Copy all checked items to new List
-            foreach (string item in clsToDo.CheckedItems)
+            foreach (ToDo item in clsToDo.CheckedItems)
             {
                 doneItems.Add(item);
             }
             //For each string in doneItems list, remove from clsToDo.Items
             //Add to lstDone.items
-            foreach (string item in doneItems)
+            foreach (ToDo item in doneItems)
             {
                 clsToDo.Items.Remove(item); //Remove by value
                 lstDone.Items.Add(item);
