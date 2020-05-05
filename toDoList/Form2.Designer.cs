@@ -38,14 +38,14 @@
             this.lblDueDate.AutoSize = true;
             this.lblDueDate.Location = new System.Drawing.Point(12, 42);
             this.lblDueDate.Name = "lblDueDate";
-            this.lblDueDate.Size = new System.Drawing.Size(112, 13);
+            this.lblDueDate.Size = new System.Drawing.Size(278, 13);
             this.lblDueDate.TabIndex = 11;
-            this.lblDueDate.Text = "What is the due date?";
+            this.lblDueDate.Text = "On a scale of 1 to 5 how high is the urgency for this task?";
             // 
             // cmbDueDates
             // 
             this.cmbDueDates.FormattingEnabled = true;
-            this.cmbDueDates.Location = new System.Drawing.Point(142, 39);
+            this.cmbDueDates.Location = new System.Drawing.Point(72, 58);
             this.cmbDueDates.Name = "cmbDueDates";
             this.cmbDueDates.Size = new System.Drawing.Size(121, 21);
             this.cmbDueDates.TabIndex = 12;
@@ -56,7 +56,7 @@
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(75, 23);
             this.btnInfo.TabIndex = 13;
-            this.btnInfo.Text = "E&nter info";
+            this.btnInfo.Text = "E&nter";
             this.btnInfo.UseVisualStyleBackColor = true;
             // 
             // Form2
@@ -64,7 +64,7 @@
             this.AcceptButton = this.btnInfo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 137);
+            this.ClientSize = new System.Drawing.Size(299, 121);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.cmbDueDates);
             this.Controls.Add(this.lblDueDate);
