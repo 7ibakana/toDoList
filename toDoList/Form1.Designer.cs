@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 24);
+            this.label1.Location = new System.Drawing.Point(33, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 0;
@@ -50,14 +50,14 @@
             // 
             // txtNewToDo
             // 
-            this.txtNewToDo.Location = new System.Drawing.Point(36, 40);
+            this.txtNewToDo.Location = new System.Drawing.Point(36, 25);
             this.txtNewToDo.Name = "txtNewToDo";
             this.txtNewToDo.Size = new System.Drawing.Size(284, 20);
             this.txtNewToDo.TabIndex = 1;
             // 
             // btnAddToDo
             // 
-            this.btnAddToDo.Location = new System.Drawing.Point(390, 38);
+            this.btnAddToDo.Location = new System.Drawing.Point(390, 73);
             this.btnAddToDo.Name = "btnAddToDo";
             this.btnAddToDo.Size = new System.Drawing.Size(75, 23);
             this.btnAddToDo.TabIndex = 2;
@@ -114,7 +114,7 @@
             this.chkUrgent.AutoSize = true;
             this.chkUrgent.Checked = true;
             this.chkUrgent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUrgent.Location = new System.Drawing.Point(326, 40);
+            this.chkUrgent.Location = new System.Drawing.Point(326, 28);
             this.chkUrgent.Name = "chkUrgent";
             this.chkUrgent.Size = new System.Drawing.Size(58, 17);
             this.chkUrgent.TabIndex = 8;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.txtNewToDo);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "To Do List";
             this.ResumeLayout(false);
             this.PerformLayout();
 
