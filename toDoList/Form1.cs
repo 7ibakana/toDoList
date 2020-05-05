@@ -19,8 +19,8 @@ namespace toDoList
 
         private void btnAddToDo_Click(object sender, EventArgs e)
         {
-            Form2 dueDate = new Form2();
-            dueDate.ShowDialog();
+            Form2 urgencyLevel = new Form2();
+            urgencyLevel.ShowDialog();
             //Remove any spaces start and end of string
             string todoText = txtNewToDo.Text;
             bool urgent = chkUrgent.Checked;

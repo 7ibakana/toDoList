@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDueDate = new System.Windows.Forms.Label();
-            this.cmbDueDates = new System.Windows.Forms.ComboBox();
+            this.lblUrgencyLevel = new System.Windows.Forms.Label();
+            this.cmbUrgencyLevel = new System.Windows.Forms.ComboBox();
             this.btnInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblDueDate
+            // lblUrgencyLevel
             // 
-            this.lblDueDate.AutoSize = true;
-            this.lblDueDate.Location = new System.Drawing.Point(12, 42);
-            this.lblDueDate.Name = "lblDueDate";
-            this.lblDueDate.Size = new System.Drawing.Size(278, 13);
-            this.lblDueDate.TabIndex = 11;
-            this.lblDueDate.Text = "On a scale of 1 to 5 how high is the urgency for this task?";
+            this.lblUrgencyLevel.AutoSize = true;
+            this.lblUrgencyLevel.Location = new System.Drawing.Point(12, 42);
+            this.lblUrgencyLevel.Name = "lblUrgencyLevel";
+            this.lblUrgencyLevel.Size = new System.Drawing.Size(278, 13);
+            this.lblUrgencyLevel.TabIndex = 11;
+            this.lblUrgencyLevel.Text = "On a scale of 1 to 5 how high is the urgency for this task?";
             // 
-            // cmbDueDates
+            // cmbUrgencyLevel
             // 
-            this.cmbDueDates.FormattingEnabled = true;
-            this.cmbDueDates.Location = new System.Drawing.Point(72, 58);
-            this.cmbDueDates.Name = "cmbDueDates";
-            this.cmbDueDates.Size = new System.Drawing.Size(121, 21);
-            this.cmbDueDates.TabIndex = 12;
+            this.cmbUrgencyLevel.FormattingEnabled = true;
+            this.cmbUrgencyLevel.Location = new System.Drawing.Point(72, 58);
+            this.cmbUrgencyLevel.Name = "cmbUrgencyLevel";
+            this.cmbUrgencyLevel.Size = new System.Drawing.Size(121, 21);
+            this.cmbUrgencyLevel.TabIndex = 12;
             // 
             // btnInfo
             // 
@@ -66,8 +66,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 121);
             this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.cmbDueDates);
-            this.Controls.Add(this.lblDueDate);
+            this.Controls.Add(this.cmbUrgencyLevel);
+            this.Controls.Add(this.lblUrgencyLevel);
             this.Name = "Form2";
             this.Text = "Due Date?";
             this.ResumeLayout(false);
@@ -77,8 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDueDate;
-        private System.Windows.Forms.ComboBox cmbDueDates;
+        private System.Windows.Forms.Label lblUrgencyLevel;
+        private System.Windows.Forms.ComboBox cmbUrgencyLevel;
         private System.Windows.Forms.Button btnInfo;
     }
 }
