@@ -38,21 +38,22 @@
             this.lblUrgencyLevel.AutoSize = true;
             this.lblUrgencyLevel.Location = new System.Drawing.Point(12, 42);
             this.lblUrgencyLevel.Name = "lblUrgencyLevel";
-            this.lblUrgencyLevel.Size = new System.Drawing.Size(278, 13);
+            this.lblUrgencyLevel.Size = new System.Drawing.Size(480, 13);
             this.lblUrgencyLevel.TabIndex = 11;
-            this.lblUrgencyLevel.Text = "On a scale of 1 to 5 how high is the urgency for this task?";
+            this.lblUrgencyLevel.Text = "On a scale of 1 to 5, with 1 being the highest and 5 the lowest, how high is the " +
+    "urgency for this task?";
             // 
             // cmbUrgencyLevel
             // 
             this.cmbUrgencyLevel.FormattingEnabled = true;
-            this.cmbUrgencyLevel.Location = new System.Drawing.Point(72, 58);
+            this.cmbUrgencyLevel.Location = new System.Drawing.Point(200, 67);
             this.cmbUrgencyLevel.Name = "cmbUrgencyLevel";
             this.cmbUrgencyLevel.Size = new System.Drawing.Size(121, 21);
             this.cmbUrgencyLevel.TabIndex = 12;
             // 
             // btnInfo
             // 
-            this.btnInfo.Location = new System.Drawing.Point(89, 82);
+            this.btnInfo.Location = new System.Drawing.Point(225, 94);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(75, 23);
             this.btnInfo.TabIndex = 13;
@@ -64,7 +65,7 @@
             this.AcceptButton = this.btnInfo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 121);
+            this.ClientSize = new System.Drawing.Size(489, 134);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.cmbUrgencyLevel);
             this.Controls.Add(this.lblUrgencyLevel);
